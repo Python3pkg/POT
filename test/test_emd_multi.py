@@ -23,7 +23,7 @@ x=np.arange(n,dtype=np.float64)
 # Gaussian distributions
 a=gauss(n,m=20,s=5) # m= mean, s= std
 
-ls= range(20,1000,10)
+ls= list(range(20,1000,10))
 nb=len(ls)
 b=np.zeros((n,nb))
 for i in range(nb):
@@ -35,7 +35,7 @@ M=ot.dist(x.reshape((n,1)),x.reshape((n,1)))
 
 #%%
 
-print('Computing {} EMD '.format(nb))
+print(('Computing {} EMD '.format(nb)))
 
 # emd loss 1 proc
 ot.tic()

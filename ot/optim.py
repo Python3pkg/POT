@@ -148,8 +148,8 @@ def cg(a,b,M,reg,f,df,G0=None,numItermax = 200,stopThr=1e-9,verbose=False,log=Fa
     it=0
 
     if verbose:
-        print('{:5s}|{:12s}|{:8s}'.format('It.','Loss','Delta loss')+'\n'+'-'*32)
-        print('{:5d}|{:8e}|{:8e}'.format(it,f_val,0))
+        print(('{:5s}|{:12s}|{:8s}'.format('It.','Loss','Delta loss')+'\n'+'-'*32))
+        print(('{:5d}|{:8e}|{:8e}'.format(it,f_val,0)))
 
     while loop:
 
@@ -186,8 +186,8 @@ def cg(a,b,M,reg,f,df,G0=None,numItermax = 200,stopThr=1e-9,verbose=False,log=Fa
 
         if verbose:
             if it%20 ==0:
-                print('{:5s}|{:12s}|{:8s}'.format('It.','Loss','Delta loss')+'\n'+'-'*32)
-            print('{:5d}|{:8e}|{:8e}'.format(it,f_val,delta_fval))
+                print(('{:5s}|{:12s}|{:8s}'.format('It.','Loss','Delta loss')+'\n'+'-'*32))
+            print(('{:5d}|{:8e}|{:8e}'.format(it,f_val,delta_fval)))
 
 
     if log:
@@ -284,8 +284,8 @@ def gcg(a,b,M,reg1,reg2,f,df,G0=None,numItermax = 10,numInnerItermax = 200,stopT
     it=0
 
     if verbose:
-        print('{:5s}|{:12s}|{:8s}'.format('It.','Loss','Delta loss')+'\n'+'-'*32)
-        print('{:5d}|{:8e}|{:8e}'.format(it,f_val,0))
+        print(('{:5s}|{:12s}|{:8s}'.format('It.','Loss','Delta loss')+'\n'+'-'*32))
+        print(('{:5d}|{:8e}|{:8e}'.format(it,f_val,0)))
 
     while loop:
 
@@ -322,8 +322,8 @@ def gcg(a,b,M,reg1,reg2,f,df,G0=None,numItermax = 10,numInnerItermax = 200,stopT
 
         if verbose:
             if it%20 ==0:
-                print('{:5s}|{:12s}|{:8s}'.format('It.','Loss','Delta loss')+'\n'+'-'*32)
-            print('{:5d}|{:8e}|{:8e}'.format(it,f_val,delta_fval))
+                print(('{:5s}|{:12s}|{:8s}'.format('It.','Loss','Delta loss')+'\n'+'-'*32))
+            print(('{:5d}|{:8e}|{:8e}'.format(it,f_val,delta_fval)))
 
 
     if log:

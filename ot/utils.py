@@ -7,6 +7,7 @@ from scipy.spatial.distance import cdist
 import multiprocessing
 
 import time
+from functools import reduce
 __time_tic_toc=time.time()
 
 def tic():
@@ -17,7 +18,7 @@ def tic():
 def toc(message='Elapsed time : {} s'):
     """ Python implementation of Matlab toc() function """
     t=time.time()
-    print(message.format(t-__time_tic_toc))
+    print((message.format(t-__time_tic_toc)))
     return t-__time_tic_toc
 
 def toq():

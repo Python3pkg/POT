@@ -121,7 +121,7 @@ def sinkhorn(a,b, M, reg, numItermax = 1000, stopThr=1e-9, verbose=False, log=Fa
            np.any(np.isinf(u)) or np.any(np.isinf(v))):
             # we have reached the machine precision
             # come back to previous solution and quit loop
-            print('Warning: numerical errors at iteration', cpt)
+            print(('Warning: numerical errors at iteration', cpt))
             u = uprev
             v = vprev
             break
@@ -134,8 +134,8 @@ def sinkhorn(a,b, M, reg, numItermax = 1000, stopThr=1e-9, verbose=False, log=Fa
 
             if verbose:
                 if cpt%200 ==0:
-                    print('{:5s}|{:12s}'.format('It.','Err')+'\n'+'-'*19)
-                print('{:5d}|{:8e}|'.format(cpt,err))
+                    print(('{:5s}|{:12s}'.format('It.','Err')+'\n'+'-'*19))
+                print(('{:5d}|{:8e}|'.format(cpt,err)))
         cpt = cpt +1
     if log:
         log['u']=u
@@ -298,8 +298,8 @@ def sinkhorn_stabilized(a,b, M, reg, numItermax = 1000,tau=1e3, stopThr=1e-9,war
 
             if verbose:
                 if cpt%(print_period*20) ==0:
-                    print('{:5s}|{:12s}'.format('It.','Err')+'\n'+'-'*19)
-                print('{:5d}|{:8e}|'.format(cpt,err))
+                    print(('{:5s}|{:12s}'.format('It.','Err')+'\n'+'-'*19))
+                print(('{:5d}|{:8e}|'.format(cpt,err)))
 
 
         if err<=stopThr:
@@ -314,7 +314,7 @@ def sinkhorn_stabilized(a,b, M, reg, numItermax = 1000,tau=1e3, stopThr=1e-9,war
            np.any(np.isinf(u)) or np.any(np.isinf(v))):
             # we have reached the machine precision
             # come back to previous solution and quit loop
-            print('Warning: numerical errors at iteration', cpt)
+            print(('Warning: numerical errors at iteration', cpt))
             u = uprev
             v = vprev
             break
@@ -481,8 +481,8 @@ def sinkhorn_epsilon_scaling(a,b, M, reg, numItermax = 100, epsilon0=1e4, numInn
 
             if verbose:
                 if cpt%(print_period*10) ==0:
-                    print('{:5s}|{:12s}'.format('It.','Err')+'\n'+'-'*19)
-                print('{:5d}|{:8e}|'.format(cpt,err))
+                    print(('{:5s}|{:12s}'.format('It.','Err')+'\n'+'-'*19))
+                print(('{:5d}|{:8e}|'.format(cpt,err)))
 
         if err<=stopThr and cpt>numItermin:
             loop=False
@@ -599,8 +599,8 @@ def barycenter(A,M,reg, weights=None, numItermax = 1000, stopThr=1e-4,verbose=Fa
 
             if verbose:
                 if cpt%200 ==0:
-                    print('{:5s}|{:12s}'.format('It.','Err')+'\n'+'-'*19)
-                print('{:5d}|{:8e}|'.format(cpt,err))
+                    print(('{:5s}|{:12s}'.format('It.','Err')+'\n'+'-'*19))
+                print(('{:5d}|{:8e}|'.format(cpt,err)))
 
     if log:
         log['niter']=cpt
@@ -703,8 +703,8 @@ def unmix(a,D,M,M0,h0,reg,reg0,alpha,numItermax = 1000, stopThr=1e-3,verbose=Fal
 
         if verbose:
             if cpt%200 ==0:
-                print('{:5s}|{:12s}'.format('It.','Err')+'\n'+'-'*19)
-            print('{:5d}|{:8e}|'.format(cpt,err))
+                print(('{:5s}|{:12s}'.format('It.','Err')+'\n'+'-'*19))
+            print(('{:5d}|{:8e}|'.format(cpt,err)))
 
         cpt = cpt+1
 

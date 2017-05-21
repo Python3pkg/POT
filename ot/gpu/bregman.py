@@ -50,7 +50,7 @@ def sinkhorn(a, b, M_GPU, reg, numItermax=1000, stopThr=1e-9, verbose=False,
            not u_GPU.allfinite() or not v_GPU.allfinite()):
             # we have reached the machine precision
             # come back to previous solution and quit loop
-            print('Warning: numerical errors at iteration', cpt)
+            print(('Warning: numerical errors at iteration', cpt))
             u_GPU = uprev_GPU.copy()
             v_GPU = vprev_GPU.copy()
             break
@@ -68,8 +68,8 @@ def sinkhorn(a, b, M_GPU, reg, numItermax=1000, stopThr=1e-9, verbose=False,
 
             if verbose:
                 if cpt % 200 == 0:
-                    print('{:5s}|{:12s}'.format('It.', 'Err')+'\n'+'-'*19)
-                print('{:5d}|{:8e}|'.format(cpt, err))
+                    print(('{:5s}|{:12s}'.format('It.', 'Err')+'\n'+'-'*19))
+                print(('{:5d}|{:8e}|'.format(cpt, err)))
         cpt += 1
     if log:
         log['u'] = u_GPU.asarray()

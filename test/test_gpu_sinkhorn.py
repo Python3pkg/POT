@@ -4,7 +4,7 @@ import time
 import ot.gpu
 
 def describeRes(r):
-    print("min:{:.3E}, max::{:.3E}, mean::{:.3E}, std::{:.3E}".format(np.min(r),np.max(r),np.mean(r),np.std(r)))
+    print(("min:{:.3E}, max::{:.3E}, mean::{:.3E}, std::{:.3E}".format(np.min(r),np.max(r),np.mean(r),np.std(r))))
 
 
 for n in [5000, 10000, 15000, 20000]:
@@ -20,7 +20,7 @@ for n in [5000, 10000, 15000, 20000]:
     transport.fit(a, b)
     G2 = transport.G
     time3 = time.time()
-    print("Normal sinkhorn, time: {:6.2f} sec ".format(time2 - time1))
+    print(("Normal sinkhorn, time: {:6.2f} sec ".format(time2 - time1)))
     describeRes(G1)
-    print("   GPU sinkhorn, time: {:6.2f} sec ".format(time3 - time2))
+    print(("   GPU sinkhorn, time: {:6.2f} sec ".format(time3 - time2)))
     describeRes(G2)

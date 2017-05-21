@@ -331,8 +331,8 @@ def joint_OT_mapping_linear(xs,xt,mu=1,eta=0.001,bias=False,verbose=False,verbos
     vloss.append(loss(L,G))
 
     if verbose:
-        print('{:5s}|{:12s}|{:8s}'.format('It.','Loss','Delta loss')+'\n'+'-'*32)
-        print('{:5d}|{:8e}|{:8e}'.format(0,vloss[-1],0))
+        print(('{:5s}|{:12s}|{:8s}'.format('It.','Loss','Delta loss')+'\n'+'-'*32))
+        print(('{:5d}|{:8e}|{:8e}'.format(0,vloss[-1],0)))
 
 
     # init loop
@@ -362,8 +362,8 @@ def joint_OT_mapping_linear(xs,xt,mu=1,eta=0.001,bias=False,verbose=False,verbos
 
         if verbose:
             if it%20==0:
-                print('{:5s}|{:12s}|{:8s}'.format('It.','Loss','Delta loss')+'\n'+'-'*32)
-            print('{:5d}|{:8e}|{:8e}'.format(it,vloss[-1],(vloss[-1]-vloss[-2])/abs(vloss[-2])))
+                print(('{:5s}|{:12s}|{:8s}'.format('It.','Loss','Delta loss')+'\n'+'-'*32))
+            print(('{:5d}|{:8e}|{:8e}'.format(it,vloss[-1],(vloss[-1]-vloss[-2])/abs(vloss[-2]))))
     if log:
         log['loss']=vloss
         return G,L,log
@@ -530,8 +530,8 @@ def joint_OT_mapping_kernel(xs,xt,mu=1,eta=0.001,kerneltype='gaussian',sigma=1,b
     vloss.append(loss(L,G))
 
     if verbose:
-        print('{:5s}|{:12s}|{:8s}'.format('It.','Loss','Delta loss')+'\n'+'-'*32)
-        print('{:5d}|{:8e}|{:8e}'.format(0,vloss[-1],0))
+        print(('{:5s}|{:12s}|{:8s}'.format('It.','Loss','Delta loss')+'\n'+'-'*32))
+        print(('{:5d}|{:8e}|{:8e}'.format(0,vloss[-1],0)))
 
 
     # init loop
@@ -561,8 +561,8 @@ def joint_OT_mapping_kernel(xs,xt,mu=1,eta=0.001,kerneltype='gaussian',sigma=1,b
 
         if verbose:
             if it%20==0:
-                print('{:5s}|{:12s}|{:8s}'.format('It.','Loss','Delta loss')+'\n'+'-'*32)
-            print('{:5d}|{:8e}|{:8e}'.format(it,vloss[-1],(vloss[-1]-vloss[-2])/abs(vloss[-2])))
+                print(('{:5s}|{:12s}|{:8s}'.format('It.','Loss','Delta loss')+'\n'+'-'*32))
+            print(('{:5d}|{:8e}|{:8e}'.format(it,vloss[-1],(vloss[-1]-vloss[-2])/abs(vloss[-2]))))
     if log:
         log['loss']=vloss
         return G,L,log
